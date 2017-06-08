@@ -13,7 +13,7 @@
 
   var database = firebase.database();
 
-var Train name = "";
+var Train_name = "";
 var Destination = "";
 var Frequency = 0;
 var FirstTrainTime = "";
@@ -27,7 +27,7 @@ var todoCount = 0;
 var childKey = "";
 
 var displayTime = function () {
-    $('body').empty();
+    
          database.ref().on("child_added", function (childSnapshot) {
        
         var firstTimeConverted = moment(childSnapshot.val().firstTrainTime, "hh:mm").subtract(1, "years");
@@ -48,17 +48,19 @@ var displayTime = function () {
        
         todoCount++;
       
-        tableRow.append(nameCell).append(destinationCell).append(frequencyCell).append(firstTrainTimeCell).append(nextTrainTimeCell).append(tMinutesTillTrainCell).append(deleteButton);
+        tableRow.append(nameCell).append(destinationCell).append(frequencyCell).append(firstTrainTimeCell).append(nextTrainTimeCell).append(tMinutesTillTrainCell);
         
         $('tbody').append(tableRow);
     });
 };
  
-$(document).on('ready', function () {
+$(document).ready(function () {
+  alert('i run')
    displayTime();
  setInterval(displayTime, 60000);
    
    $('#submit').on('click', function () {
+
 
             name = $('#inputName').val().trim();
             destination = $('#inputDestination').val().trim();
@@ -82,7 +84,7 @@ $(document).on('ready', function () {
             $('#inputFrequency').val('');
             return false;
             
-        }
+        
     });
     
 });
