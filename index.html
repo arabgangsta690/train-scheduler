@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Train Schedule</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/4.1.2/firebase.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  <link rel="stylesheet" type="text/javascript" href="assets/css/javascript/java.js">
+
+</head>
+<body>
+<div class="container">
+    <div class="row">
+      <div class="jumbotron main-title">
+        <h1>Train Scheduler</h1>
+        <p class="text-lead">Ride the RTA</p>
+      </div>
+    </div>
+    <div class="panel panel-primary">
+      <div class="panel-heading">Current RTA Schedule</div>
+      <div class="panel-body"> <div class="panel-body table-responsive">
+          <table class="table table-striped table-hover">
+            <thead>
+              <tr>
+                <th>Train Name</th>
+                <th>Destination</th>
+                <th>Frequency (min)</th>
+                <th>First Train Time</th>
+                <th>Next Arrival</th>
+                <th>Minutes Away</th>
+              </tr>
+            </thead>
+            <tbody>
+            <td>Tram Train
+            </td>
+            <td>Pakistan
+            </td>
+            <td>10
+            </td>
+            <td>1:00
+            </td>
+            <td>12
+            </td>
+            <td>2
+            </td>
+            </tbody>
+          </table>
+        </div>
+        </div>
+    </div>
+        <div class="panel panel-primary">
+      <div class="panel-heading">Add Train</div>
+      <div class="panel-body"><div class="form-group">
+                <label for="inputName" class="col-lg-2 control-label">Train Name</label>
+                <div class="col-lg-10">
+                  <input type="text" class="form-control" id="inputName" placeholder="Name">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="inputDestination" class="col-lg-2 control-label">Destination</label>
+                <div class="col-lg-10">
+                  <input type="text" class="form-control" id="inputDestination" placeholder="Destination">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="inputFirstTime" class="col-lg-2 control-label">First Train Time (HH:mm)</label>
+                <div class="col-lg-10">
+                  
+                  <input type="number" min="0" max="23" class="form-control military" id="inputHour" required placeholder="hh"><b>:</b>
+                  <input type="number" min="0" max="59" class="form-control military" id="inputMinute" required placeholder="mm">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="inputFrequency" class="col-lg-2 control-label">Frequency (min)</label>
+                <div class="col-lg-10">
+                  <input type="number" class="form-control" id="inputFrequency" placeholder="Frequency">
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="col-lg-10 col-lg-offset-6">
+                  <button id="submit" type="submit" class="btn btn-default">Submit</button>
+                </div>
+              </div>
+            </fieldset>
+          </form></div>
+    </div>
+    
+       
+        </div>
+        
+      </div>
+    </div>
+    
+              
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

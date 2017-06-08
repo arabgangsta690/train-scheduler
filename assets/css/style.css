@@ -1,0 +1,36 @@
+body {
+	background-image: url('background.jpg');
+}
+
+h1 {
+	text-align:center;
+	color:white;
+	
+}
+
+p {
+	text-align:center;
+	color:white;
+
+}
+
+.panel-primary {
+	width:950px;
+	height:300px;
+	margin-top:10px;
+	margin-left:80px;
+}
+
+.jumbotron  {
+	background-image: url(../train.jpg);
+    background-position: 0% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+td {
+	width:150px;
+	height:160px;
+}
+
